@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+ *{
+            box-sizing: border-box;
+  }
+
+.back{
+background-color:#368BC1
+}
+
+.a{
+
+           width: 300px;
+           height: fit-content;
+           margin: auto;
+           border-radius: 10px;
+           box-sizing: border-box;
+}
+button{
+            background-color: rgb(3, 59, 41);
+            color: white;
+            height: 30px;
+
+            border-radius: 10px;
+
+            width: 100%;
+            margin: auto;
+            border: none;
+            }
+.c{
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px 8px;
+            }
+h1{ width: fit-content;
+            margin: auto;
+            }
+              .create{
+    margin-top:60%;
+    margin-left:-20px;
+           }
+  h1{ width: fit-content;
+            margin: auto;
+</style>
+<body class="back">
+<div class="a">
+<form action="deposit" method="post">
+    {% csrf_token %}
+     <div class="create">
+           <h1 class="h1">DEPOSIT A AMOUNT</h1>
+    <input type="text"name="acc_no" PLACEHOLDER="enter acc_no" class="c">
+    <input type="number" name="deposit" placeholder="enter amount" class="c">
+    <button>DEPOSIT</button>
+</form>
+<H4 STYLE="COLOR:RED;">{{rs}}{{deposit}}{{d}}</H4>
+</div>
+</body>
+</html>
